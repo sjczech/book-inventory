@@ -2,4 +2,4 @@
 
 This web app functions as an inventory where users can keep track of books they own.  Each entry includes a unique ID, title, author, and genre. Users have the ability to view current entries, create new ones, edit existing entries, or delete unneeded ones.  
 
-If you have Maven installed, you can clone the repository and open it your IDE. To run the application, <code>mvn spring-boot:run</code>.  Then point your browser to <code>http://localhost:8080/books</code>;
+If you have Maven installed, you can clone the repository and open it your IDE. To run the application, <code>mvn spring-boot:run</code>. Alternatively, you can right-click on the BookInventoryApplication class in the project window and click on Run BookInventoryApplication.  Then point your browser to <code>http://localhost:8080/books</code>;
