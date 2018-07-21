@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Raleway:400,300,600" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/4.0.0/normalize.min.css" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" />
+    <title>Library Management</title>
+</head>
+<body>
+<div class="container">
+
+        <h1 style="padding-top: 25px">CzechBooks Personal Library Management</h1>
+        <a href="/book/new"><button style="background-color: blue; color: white">Create New Book Entry</button></a>
+        <div th:if="${not #lists.isEmpty(book)}">
+        <table class="u-full-width">
+            <tr>
+                <th>Book ID</th>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Genre</th>
+                <th></th>
+                <th></th>
+                <th></th>
+
+            </tr>
+            <tr th:each="book : ${book}">
+                <td th:text="${book.id}"><a href="/book/${book.id}">Book Id</a></td>
+                <td th:text="${book.bookTitle}">Title</td>
+                <td th:text="${book.bookAuthor}">Author</td>
+                <td th:text="${book.bookGenre}">Genre</td>
+                <td><a th:href="${'/book/' + book.id}"><b>View</b></a></td>
+                <td><a th:href="${'/book/edit/' + book.id}"><b>Edit</b></a></td>
+                <td><a th:href="${'/book/delete/' + book.id}"><b>Delete</b></a></td>
+            </tr>
+        </table>
+    </div>
+    <img th:src="@{/static/books.jpg}" alt="books" style="display: block; margin-left: auto;margin-right: auto;width: 50%;"/>
+</div>
+</body>
+</html>

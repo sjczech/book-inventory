@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Raleway:400,300,600" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/4.0.0/normalize.min.css" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" />
+    <title>Book Inventory Form</title>
+</head>
+<body>
+<div class="container">
+
+    <h1 style="padding-top: 25px">CzechBooks Inventory Form</h1>
+
+    <img th:src="@{/static/open_book.jpg}" alt="books" style="display: block; margin-left: auto;margin-right: auto;width: 50%;"/>
+
+
+    <div class="column">
+
+        <form th:object="${book}" th:action="@{/book}" method="post">
+            <input type="hidden" th:field="*{id}"/>
+            <input type="hidden" th:field="*{version}"/>
+            <div>
+                <label>Title:</label>
+                <input type="text" th:field="*{bookTitle}"/><br/>
+                <p th:if="${#fields.hasErrors('bookTitle')}" th:errors="*{bookTitle}" style="color: red">Title error</p>
+            </div>
+            <div>
+                <label>Author:</label>
+                <input type="text" th:field="*{bookAuthor}"/><br/>
+                <p th:if="${#fields.hasErrors('bookAuthor')}" th:errors="*{bookAuthor}" style="color: red">Author error</p>
+            </div>
+            <div>
+                <label>Genre:</label>
+                <input type="text" th:field="*{bookGenre}"/><br/>
+                <p th:if="${#fields.hasErrors('bookGenre')}" th:errors="*{bookGenre}" style="color: red">Genre error</p>
+            </div>
+            <br/>
+            <button type="submit" style="background-color: blue; color: white">Submit</button>
+        </form>
+        <a href="/books"><button style="color: blue">Cancel</button></a>
+
+    </div>
+
+</div>
+
+</body>
+</html>

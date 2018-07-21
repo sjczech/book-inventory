@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Raleway:400,300,600" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/4.0.0/normalize.min.css" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" />
+    <title >Entry Details</title>
+</head>
+<body>
+<div class="container">
+    <h1 style="padding-top: 25px">CzechBooks Entry Details</h1>
+
+    <img th:src="@{/static/book_shelf.jpg}" alt="books" style="display: block; margin-left: auto;margin-right: auto;width: 50%;"/>
+
+    <br/>
+    <div class="row">
+        <div>
+            <div>
+                <label>Book ID:</label>
+                <p th:text="${book.id}"></p>
+            </div>
+            <label>Title:</label><p th:text="${book.bookTitle}"></p>
+
+            <label>Author:</label><p th:text="${book.bookAuthor}"></p>
+
+            <label>Genre:</label><p th:text="${book.bookGenre}"></p>
+            <a href="/books"><button style="background-color: blue; color: white">View All Books</button></a>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>
