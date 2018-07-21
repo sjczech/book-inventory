@@ -4,6 +4,10 @@ import javax.persistence.*;
 import javax.validation.Valid;
 import javax.validation.constraints.Size;
 
+/**
+ * The Book class defines the structure of the data for each book entry.  This class
+ * also provides validation to ensure that the user enters each field before submitting the form.
+ */
 
 @Entity
 public class Book {

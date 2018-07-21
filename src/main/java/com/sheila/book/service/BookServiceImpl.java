@@ -5,6 +5,10 @@ import com.sheila.book.model.Book;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+/**
+ * The BookServiceImpl class implements the methods from the BookService interface
+ */
+
 @Service
 public class BookServiceImpl implements BookService {
 

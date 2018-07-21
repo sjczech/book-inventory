@@ -8,6 +8,15 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
+/**
+ * This BookInventoryApplication class is the main class in this application that has the app run
+ * as a Spring Boot application and sets a logger
+ *
+ * @author Sheila Czech
+ * @version 1.0
+ * @since 7/20/18
+ */
+
 @SpringBootApplication
 public class BookInventoryApplication {
 

@@ -15,7 +15,10 @@ import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import javax.validation.Valid;
 
-
+/**
+ * The BookController class sets the REST API endpoints for the application to create, read, update,
+ * and delete book entries
+ */
 
 @Controller
 public class BookController extends WebMvcConfigurerAdapter{
