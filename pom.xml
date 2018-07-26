@@ -86,8 +86,7 @@
                 <version>1.2.0</version>
                 <configuration>
                     <resourceGroup>maven-projects</resourceGroup>
-                    <appName>${project.artifactId}-${maven.build.timestamp}</appName>
-                    <region>westus</region>
+                    <appName>czech-books</appName>
                     <javaVersion>1.8</javaVersion>
                     <deploymentType>war</deploymentType>
                 </configuration>
